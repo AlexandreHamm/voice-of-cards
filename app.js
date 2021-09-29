@@ -7,7 +7,9 @@ let deck = [],
     handP4 = [],
     pot = [],
     dump = [];
-let nth = 1;
+let nth = 1,
+    e,
+    x;
 
 // CREATE DECK
 for (let i = 0; i < suits.length; i++) {
@@ -39,149 +41,149 @@ function start(){
     //     //     return;
     //     // });
     // }, 300);
-    function translate(){
-        setTimeout(function(){
-            console.log('true');
-            document.querySelector('.board__players').style.transform = 'translateX(0)';
-            setTimeout(function(){
-                console.log('true2');
-                document.querySelector('.board__players').style.transform = 'translateX(-25%)';
-                setTimeout(function(){
-                    console.log('true3');
-                    document.querySelector('.board__players').style.transform = 'translateX(-50%)';
-                    setTimeout(function(){
-                        console.log('true4');
-                        document.querySelector('.board__players').style.transform = 'translateX(-75%)';
-                        translate();
-                    }, 1000);
-                }, 1000);
-            }, 1000);
-        },1000)
-    }
-    translate();
+    // function translate(){
+    //     setTimeout(function(){
+    //         console.log('true');
+    //         document.querySelector('.board__players').style.transform = 'translateX(0)';
+    //         setTimeout(function(){
+    //             console.log('true2');
+    //             document.querySelector('.board__players').style.transform = 'translateX(-25%)';
+    //             setTimeout(function(){
+    //                 console.log('true3');
+    //                 document.querySelector('.board__players').style.transform = 'translateX(-50%)';
+    //                 setTimeout(function(){
+    //                     console.log('true4');
+    //                     document.querySelector('.board__players').style.transform = 'translateX(-75%)';
+    //                     translate();
+    //                 }, 1000);
+    //             }, 1000);
+    //         }, 1000);
+    //     },1000)
+    // }
+    // translate();
 }
 
 // GET CARDS VALUES & SUITS
 
 function cardValues(){
-    if(pot[pot.length-1].Value == '1'){
-        document.querySelector('.card'+String(nth)).innerHTML = 'Ace of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    if(e[e.length-1].Value == '1'){
+        document.querySelector(x).innerHTML = 'Ace of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
-    else if(pot[pot.length-1].Value == '2'){
-        document.querySelector('.card'+String(nth)).innerHTML = '2 of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    else if(e[e.length-1].Value == '2'){
+        document.querySelector(x).innerHTML = '2 of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
-    else if(pot[pot.length-1].Value == '3'){
-        document.querySelector('.card'+String(nth)).innerHTML = '3 of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    else if(e[e.length-1].Value == '3'){
+        document.querySelector(x).innerHTML = '3 of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
-    else if(pot[pot.length-1].Value == '4'){
-        document.querySelector('.card'+String(nth)).innerHTML = '4 of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    else if(e[e.length-1].Value == '4'){
+        document.querySelector(x).innerHTML = '4 of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
-    else if(pot[pot.length-1].Value == '5'){
-        document.querySelector('.card'+String(nth)).innerHTML = '5 of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    else if(e[e.length-1].Value == '5'){
+        document.querySelector(x).innerHTML = '5 of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
-    else if(pot[pot.length-1].Value == '6'){
-        document.querySelector('.card'+String(nth)).innerHTML = '6 of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    else if(e[e.length-1].Value == '6'){
+        document.querySelector(x).innerHTML = '6 of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
-    else if(pot[pot.length-1].Value == '7'){
-        document.querySelector('.card'+String(nth)).innerHTML = '7 of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    else if(e[e.length-1].Value == '7'){
+        document.querySelector(x).innerHTML = '7 of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
-    else if(pot[pot.length-1].Value == '8'){
-        document.querySelector('.card'+String(nth)).innerHTML = '8 of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    else if(e[e.length-1].Value == '8'){
+        document.querySelector(x).innerHTML = '8 of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
-    else if(pot[pot.length-1].Value == '9'){
-        document.querySelector('.card'+String(nth)).innerHTML = '9 of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    else if(e[e.length-1].Value == '9'){
+        document.querySelector(x).innerHTML = '9 of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
-    else if(pot[pot.length-1].Value == '10'){
-        document.querySelector('.card'+String(nth)).innerHTML = '10 of ';
-        if(pot[pot.length-1].Suit == 'Heart'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Heart';
-        }else if(pot[pot.length-1].Suit == 'Club'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Club'
-        }else if(pot[pot.length-1].Suit == 'Diamond'){
-            document.querySelector('.card'+String(nth)).innerHTML += 'Diamond'
+    else if(e[e.length-1].Value == '10'){
+        document.querySelector(x).innerHTML = '10 of ';
+        if(e[e.length-1].Suit == 'Heart'){
+            document.querySelector(x).innerHTML += 'Heart';
+        }else if(e[e.length-1].Suit == 'Club'){
+            document.querySelector(x).innerHTML += 'Club'
+        }else if(e[e.length-1].Suit == 'Diamond'){
+            document.querySelector(x).innerHTML += 'Diamond'
         }else{
-            document.querySelector('.card'+String(nth)).innerHTML += 'Spades'
+            document.querySelector(x).innerHTML += 'Spades'
         }
     }
 }
@@ -190,17 +192,43 @@ function cardValues(){
 
 function drawCard(){
     if(document.querySelector('.card1').innerHTML !== "" && document.querySelector('.card2').innerHTML !== "" && document.querySelector('.card3').innerHTML !== "" && document.querySelector('.card4').innerHTML !== "" && document.querySelector('.card5').innerHTML !== "" && document.querySelector('.card6').innerHTML !== "" && document.querySelector('.card7').innerHTML !== ""){
+        if(document.querySelector('.board__player1--hand>.cardHand1').innerHTML !== "" && document.querySelector('.board__player1--hand>.cardHand2').innerHTML !== "" && document.querySelector('.board__player1--hand>.cardHand3').innerHTML !== ""){
+            return;
+        }else{
+            e = handP1;
+            handP1.push(deck.pop());
+            document.querySelector(".board__remain--counter").innerHTML = deck.length;
+            if(document.querySelector('.board__player1--hand>.cardHand'+String(nth)).innerHTML === ""){
+                x = '.board__player1--hand>.cardHand'+String(nth);
+                cardValues();
+                nth = 1;
+            }else{
+                let cardContent = setInterval(function(){
+                    if(document.querySelector('.board__player1--hand>.cardHand'+String(nth)).innerHTML === ""){
+                        x = '.board__player1--hand>.cardHand'+String(nth);
+                        cardValues();
+                        nth = 1;
+                        clearInterval(cardContent);
+                    }else{
+                        nth++;
+                    }
+                })
+            }
+        }
         return;
     }else{
+        e = pot;
         pot.push(deck.pop());
         document.querySelector(".board__remain--counter").innerHTML = deck.length;
         // console.log(pot);
         if(document.querySelector('.card'+String(nth)).innerHTML === ""){
+            x = '.card'+String(nth);
             cardValues();
             nth = 1;
         }else{
             let cardContent = setInterval(function(){
                 if(document.querySelector('.card'+String(nth)).innerHTML === ""){
+                    x = '.card'+String(nth);
                     cardValues();
                     nth = 1;
                     clearInterval(cardContent);
