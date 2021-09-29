@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Butler';
+    src: url(./src/fonts/Butler.otf);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --butler: 'Butler', 'Arial', 'serif';
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #64554e;
+    background-image: url(./src/img/bodybg.webp);
+    background-position: center;
+    background-size: cover;
+}
+header{
+    position: relative;
+    transform: translateY(-30px);
+    width: 100%;
+}
+.header__cookies{
+    background-color: rgb(194, 142, 63);
+    height: 30px;
+}
+.header__nav{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+    color: #fff;
+}
+
+.board{
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #FFF;
+    box-shadow: 0 0 10px #000;
+    width: 1344px;
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+    background-position: center;
+    background-image: url(./src/img/boardbg.jpg);
+}
+.board__start{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.startBtn{
+    padding: 10px 20px;
+    font-size: 30px;
+}
+.board__remain::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 20px 15px;
+    border-bottom-right-radius: 20px 15px;
+    background-image: url(./src/img/counterbg.png);
+    filter: brightness(130%) grayscale(10%) contrast(60%);
+    z-index: 9;
+}
+.board__remain{
+    position: absolute;
+    max-height: 100px;
+    top: 0;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 50px;
+    border-bottom-left-radius: 20px 15px;
+    border-bottom-right-radius: 20px 15px;
+    font-family: var(--butler);
+    z-index: 10;
+}
+.board__remain::after{
+    content: '';
+    position: absolute;
+    top: -52px;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    border: 1px solid black;
+    height: 90%;
+    width: 90%;
+    padding-top: 50px;
+    z-index: 10;
+}
+.board__remain--title{
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    z-index: 11;
+}
+.board__remain--counter{
+    font-size: 40px;
+    font-weight: bolder;
+    z-index: 11;
+}
+.board__pot{
+    position: relative;
+    width: 100%;
+    height: 55%;
+    background-color: #41362f;
+    background-size: cover;
+    background-image: url(./src/img/potbg.jpg);
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 3px 0 10px #000;
+}
+.board__pot--area::before{
+    content: 'Cour';
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 110px;
+    background-color: #5a3818;
+    border: 5px rgb(161, 126, 59) solid;
+    border-radius: 10px;
+    color: rgb(255, 219, 174);
+    font-weight: bold;
+    font-family: var(--butler);
+}
+.board__pot--area{
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    margin-top: 100px;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: calc(95% - 100px);
+    border: 3px solid #000;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.board__pot--cards{
+    width: 15%;
+    height: 95%;
+    border-right: 3px dashed #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: var(--butler);
+}
+.board__pot--cards:last-child{
+    border: none;
+}
+.board__players{
+    position: relative;
+    width: 400%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.board__player1, .board__player2, .board__player3, .board__player4{
+    width: calc(90%/4);
+    margin: 0 calc(5%/4);
+    height: 80%;
+    background-color: #000;
+    background-image: url(./src/img/temp.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board__player--avatar{
+    width: 15%;
+    height: 90%;
+    border: 2px solid #000;
+}
+.board__player--area{
+    width: 60%;
+    height: 93%;
+    display: flex;
+    justify-content: center;
+}
+.board__player--cards{
+    width: 30%;
+    margin: 0 .5%;
+    height: 100%;
+    border: 2px solid #000;
+}
+.board__player1--hand, .board__player2--hand, .board__player3--hand, .board__player4--hand{
+    width: 15%;
+    height: 90%;
+    border: 2px solid #000;
+}
+
+
+.test{
+    position: absolute;
+    padding: 5px 15px;
+    z-index: 99;
+    left: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
