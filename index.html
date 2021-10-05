@@ -35,31 +35,53 @@
     <!-- EVENT CARDS
         [SANS EFFET] Rien ne se passe
         [PASSE] Le prochain joueur passe son tour
-        [SUBTILISATION]Vole une combinaison au joueur de votre choix
+        [SUBTILISATION] Vole une combinaison au joueur de votre choix
         Le sens de jeu s'inverse
         [BOMBE] Le joueur qui a tiré cette carte passe son tour
         [TIRAGE] Piocher une carte
         [ATTAQUE] Déplace une carte de la main du joueur de votre choix vers la Cour
         [RECHARGE DE CARTES] Jusqu'à 5 cartes de la défausse sont remises dans la pile
         [DEPOUILLEMENT] Déplace toutes les cartes de votre main vers la Cour
+        [RECHARGE D'EVENEMENTS] ?5 cartes evenements qui reviennent
     -->
 
     <header>
         <section class="header__cookies">Test</section>
-        <section class="header__nav">GAME PARLOR</section>
+        <section class="header__title">
+            <h1>Voice of Cards</h1>
+        </section>
     </header>
     <main class="board">
-        <div class="board__start">
-            <button class="startBtn" onclick="start()">Commencer</button>
+        <div class="board__start"></div>
+        <div class="board__infoCard">
+            <div class="board__infoCard--modal">
+                Pour jouer, cliquer sur "Commencer".
+            </div>
+            <div class="board__infoCard--buttons">
+                <button class="leftBtn" onclick="start()">Commencer</button>
+                <button class="rightBtn" onclick="rules()">Règles</button>
+            </div>
+        </div>
+        <div class="board__eventCard">
+            <div class="board__eventCard--modal">
+                Voulez-vous tirer une carte 'Evénement' ?
+                <div class="board__eventCard--buttons">
+                    <button class="yesBtn">Oui</button>
+                    <button class="noBtn">Non</button>
+                </div>
+            </div>
         </div>
         <div class="board__remain">
             <h1 class="board__remain--title">Cartes restantes</h1>
             <span class="board__remain--counter"></span>
         </div>
-        <div class="board__infoCard">
-            <!-- ... -->
-        </div>
         <div class="board__pot">
+            <div class="board__pot--deck">
+                DECK
+            </div>
+            <div class="board__pot--eventCard">
+                EVENT CARD
+            </div>
             <div class="board__pot--area">
                 <div class="board__pot--cards">
                     <div class="card1"></div>
@@ -122,7 +144,9 @@
                     </div>
                 </div>
                 <div class="board__player2--hand">
-                    <div class="cardHand"></div>
+                    <div class="cardHand1"></div>
+                    <div class="cardHand2"></div>
+                    <div class="cardHand3"></div>
                 </div>
             </div>
             <div class="board__player3">
@@ -141,7 +165,9 @@
                     </div>
                 </div>
                 <div class="board__player3--hand">
-                    <div class="cardHand"></div>
+                    <div class="cardHand1"></div>
+                    <div class="cardHand2"></div>
+                    <div class="cardHand3"></div>
                 </div>
             </div>
             <div class="board__player4">
@@ -159,8 +185,10 @@
                         <div class="slot12"></div>
                     </div>
                 </div>
-                <div class="board__player3--hand">
-                    <div class="cardHand"></div>
+                <div class="board__player4--hand">
+                    <div class="cardHand1"></div>
+                    <div class="cardHand2"></div>
+                    <div class="cardHand3"></div>
                 </div>
             </div>
             <button class="test" onclick='drawCard()'>Test</button>
